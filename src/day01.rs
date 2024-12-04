@@ -41,14 +41,12 @@ pub fn run() {
                 Some(count) => {
                     sum += a_list[i] * count;
                 }
-                None => {
-                    
-                }
+                None => {}
             }
         }
 
         println!("total sum of reps: {sum}");
     } else {
-        println!("error: unable to parse numbers.");
+        println!("error: unable to read data file.");
     }
 }
