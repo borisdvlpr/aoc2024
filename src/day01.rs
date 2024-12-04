@@ -1,15 +1,14 @@
-use std::collections::HashMap;
-use std::fs::File;
-use std::io::{BufRead, BufReader, Lines, Result};
-use std::path::Path;
+use crate::helpers::read_lines;
 
-fn main() {
+use std::collections::HashMap;
+
+pub fn run() {
     let mut a_list: Vec<i32> = Vec::new();
     let mut b_list: Vec<i32> = Vec::new();
     let mut sum = 0;
     let mut map: HashMap<i32, i32> = HashMap::new();
 
-    if let Ok(lines) = read_lines("./files/data.txt") {
+    if let Ok(lines) = read_lines("./files/day01/data.txt") {
         for line in lines.flatten() {
             let numbers: Vec<&str> = line.split("   ").collect();
             a_list.push(numbers[0].trim().parse().unwrap());
@@ -52,12 +51,4 @@ fn main() {
     } else {
         println!("error: unable to parse numbers.");
     }
-}
-
-fn read_lines<P>(filename: P) -> Result<Lines<BufReader<File>>>
-where
-    P: AsRef<Path>,
-{
-    let file = File::open(filename)?;
-    Ok(BufReader::new(file).lines())
 }
