@@ -24,7 +24,9 @@ fn check_sequence(numbers: &[&str], ascending: bool) -> bool {
     }
 
     for i in 0..numbers.len() {
-        let filtered_numbers: Vec<&str> = numbers.iter().enumerate()
+        let filtered_numbers: Vec<&str> = numbers
+            .iter()
+            .enumerate()
             .filter(|&(index, _)| index != i)
             .map(|(_, &num)| num)
             .collect();
