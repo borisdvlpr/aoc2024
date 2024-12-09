@@ -8,7 +8,7 @@ pub fn run() {
     let mut enabled = true;
     let mut result = 0;
 
-    if let Ok(lines) = read_lines("./files/day03/data.txt") {
+    if let Ok(lines) = read_lines("./data.txt") {
         let lines: Vec<String> = lines.flatten().collect();
         for line in &lines {
             for mult in re_mul.find_iter(&line) {

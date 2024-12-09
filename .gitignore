@@ -8,3 +8,6 @@ Cargo.lock
 
 # system
 .DS_Store
+
+# misc
+data.txt

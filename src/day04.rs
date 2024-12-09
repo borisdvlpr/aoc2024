@@ -1,7 +1,7 @@
 use crate::helpers::read_lines;
 
 pub fn run() {
-    if let Ok(lines) = read_lines("./files/day04/data.txt") {
+    if let Ok(lines) = read_lines("./data.txt") {
         let lines: Vec<String> = lines.flatten().collect();
         let grid: Vec<Vec<char>> = lines
             .into_iter()

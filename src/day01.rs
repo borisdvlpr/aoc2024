@@ -8,7 +8,7 @@ pub fn run() {
     let mut sum = 0;
     let mut map: HashMap<i32, i32> = HashMap::new();
 
-    if let Ok(lines) = read_lines("./files/day01/data.txt") {
+    if let Ok(lines) = read_lines("./data.txt") {
         for line in lines.flatten() {
             let numbers: Vec<&str> = line.split("   ").collect();
             a_list.push(numbers[0].trim().parse().unwrap());
